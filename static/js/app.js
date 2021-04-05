@@ -1,5 +1,5 @@
 // Create function for plot graphs
-function init() {
+function init(sample) {
 
 // Use the D3 library to read in samples.json.
     d3.json('data/samples.json').then(data => {
@@ -11,6 +11,10 @@ function init() {
     // Use otu_ids as the labels for the bar chart.
     // Use otu_labels as the hovertext for the chart.
 
+    Object.entries(sample).forEach(function ([key, value]) {
+        
+    })
+
     let values = data.sample_values.slice(0,10);
     let labels = data.otu_ids.slice(0,10);
     let hovertext = data.otu_labels.slice(0,10);
@@ -18,7 +22,7 @@ function init() {
     const trace1 = {
         x: values,
         y: labels,
-        text: labels,
+        text: hovertext,
         type: 'bar',
         orientation: 'h'
     };
