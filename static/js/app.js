@@ -13,7 +13,7 @@
 
         // Object.entries(sample).forEach(function ([key, value]))
 
-        let values = data.samples.sample_values;
+        let values = (data.samples);
         // let labels = data.samples.otu_ids;
         // let hovertext = data.samples.otu_labels;
         console.log(values);
@@ -70,13 +70,17 @@
 
 
         // Display the sample metadata, i.e., an individual's demographic information.
+        // Display each key-value pair from the metadata JSON object somewhere on the page.
+// function metaData(meta) {
 
+    d3.json('data/samples.json').then(data => {
 
+        let metaData = data.metadata;
+        console.log(metaData);
+    
 
-
-    // Display each key-value pair from the metadata JSON object somewhere on the page.
-
-
+    })
+// };
 
 
 
