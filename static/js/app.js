@@ -1,8 +1,8 @@
 // Create function for plot graphs
-// function plotsData(sample) {
+function plotsData() {
 
     // Use the D3 library to read in samples.json.
-    d3.json('data/samples.json').then(data => {
+    d3.json('./data/samples.json').then(data => {
         console.log(data);
         
         
@@ -13,37 +13,36 @@
 
         // Object.entries(sample).forEach(function ([key, value]))
 
-        let values = (data.samples);
-        // let labels = data.samples.otu_ids;
-        // let hovertext = data.samples.otu_labels;
+        const values = data.samples.map(d => d.sample_values);
+        let labels = data.samples.map(d => d.otu_ids);
+        let hovertext = data.samples.map(d => d.otu_labels);
         console.log(values);
-        // console.log(labels);
+        console.log(labels);
         // console.log(hovertext);
 
-    });
+    
 
-        //     const trace1 = {
-        //         x: values,
-        //         y: labels,
-        //         text: hovertext,
-        //         type: 'bar',
-        //         orientation: 'h'
-        //     };
+            const trace1 = {
+                x: values,
+                y: labels,
+                // text: hovertext,
+                type: 'bar',
+                orientation: 'h'
+            };
 
-        //     const barData = [trace1];
+            const barData = [trace1];
 
-        //     const layout = {
-        //         title: "Top 10 OTUs found",
-        //         // xaxis:
-        //         // yaxis:
-        //     };
+            const layout = {
+                title: "Top 10 OTUs found",
+                // xaxis:
+                yaxis: { tickmode: 'linear'}
+            };
 
-        //     // plot out bar chat
-        //     Plotly.newPlot('bar', barData, layout);
-
-
-// };
-
+            // plot out bar chat
+            Plotly.newPlot('bar', barData, layout);
+        });
+};
+plotsData();
 
         // Create a bubble chart that displays each sample.
         // Use otu_ids for the x values.
@@ -76,7 +75,7 @@
     d3.json('data/samples.json').then(data => {
 
         let metaData = data.metadata;
-        console.log(metaData);
+        // console.log(metaData);
     
 
     })
