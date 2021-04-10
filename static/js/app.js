@@ -73,7 +73,7 @@ function plotData(otu_id) {
         // Display the sample metadata, i.e., an individual's demographic information.
         // Display each key-value pair from the metadata JSON object somewhere on the page.
 function metaData(otu_id) {
-    var metadataDiv = d3.select('#sample-metadata')
+    let metadataDiv = d3.select('#sample-metadata')
     metadataDiv.html('');
 
     d3.json('data/samples.json').then(data => {
@@ -85,7 +85,7 @@ function metaData(otu_id) {
 
         // Populate list for Demographic info chart
         metadataDiv 
-            .append('h3').text(`ID: ${subject.id}`)
+            .append('h3').text(`ID: ${subject.id}` + "\n")
             .append('h3').text(`Ethnicity: ${subject.ethnicity}`)
             .append('h3').text(`Gender: ${subject.gender}`)
             .append('h3').text(`Age: ${subject.age}`)
