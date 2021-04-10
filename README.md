@@ -39,3 +39,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 6. Lastly, I had to pdate all of the plots and demographic information any time that a new sample is selected from the dropdown menu.
 
 ![hw](Images/hw02.png)
+
+### About the Data
+
+Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable_. Retrieved from: [http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/)
