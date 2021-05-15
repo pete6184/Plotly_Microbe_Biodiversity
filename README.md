@@ -36,9 +36,8 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 ![hw](Images/hw03.png)
 
-6. Lastly, I had to pdate all of the plots and demographic information any time that a new sample is selected from the dropdown menu.
+6. Lastly, I had to update all of the plots and demographic information any time that a new sample is selected from the dropdown menu.
 
-![hw](Images/hw02.png)
 
 ### About the Data
 
